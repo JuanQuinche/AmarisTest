@@ -1,20 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>21efd520-5343-419c-828f-400af64c6ebb</UserSecretsId>
+    <UserSecretsId>bf98768d-43d5-43a9-8db7-e6c2e58a49dd</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.18" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AmarisTest.Dal\AmarisTest.Dal.csproj" />
     <ProjectReference Include="..\AmarisTest.Domain\AmarisTest.Domain.csproj" />
+    <ProjectReference Include="..\AmarisTest.Service\AmarisTest.Service.csproj" />
   </ItemGroup>
 
 </Project>

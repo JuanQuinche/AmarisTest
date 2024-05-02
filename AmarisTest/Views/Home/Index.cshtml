@@ -1,8 +1,71 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using AmarisTest.Domain.Models;
+@using System.Globalization
+@model List<Employee>
+@{
+    ViewData["Title"] = "Search Employees";
+
+
+    string FormatDefaultFloatCurrency(float value)
+    {
+        var regionCode = "en-US";
+        return value.ToString("C0", CultureInfo.CreateSpecificCulture(regionCode));
+    }
+
+    string FormatFloatCurrency(float value)
+    {
+        var regionCode = "en-US";
+        var region = new RegionInfo(regionCode);
+        var culture = CultureInfo.CreateSpecificCulture(regionCode);
+        culture.NumberFormat.CurrencySymbol = region.CurrencySymbol;
+
+        return value.ToString("C0", culture);
+    }
+
+    string FormatFloatCurrencyISO(float value)
+    {
+        var regionCode = "en-US";
+        var region = new RegionInfo(regionCode);
+        var culture = CultureInfo.CreateSpecificCulture(regionCode);
+        culture.NumberFormat.CurrencySymbol = region.ISOCurrencySymbol;
+
+        return value.ToString("C0", culture);
+    }
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Search Employees</h1>
+    <p>Please insert the id of the employee</p>
+    <form asp-action="Search">
+        <div class="mb-3">
+            <label for="SearchedId" class="form-label text-justify">Employee Id</label>
+            <input type="text" class="form-control" id="SearchedId" aria-describedby="idHelp">
+            <div id="idHelp" class="form-text">If no Id is provided a complete list will be shown.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Anual Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var empl in Model)
+                {
+                    <tr>
+                        <td scope="col">@empl.Id</td>
+                        <td scope="col">@empl.Name</td>
+                        <td scope="col">@empl.LastName</td>
+                        <td scope="col">@FormatFloatCurrency(empl.EmployeeSalary)</td>
+                        <td scope="col">@FormatFloatCurrency(empl.EmployeeAnnualSalary)</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </form>
 </div>

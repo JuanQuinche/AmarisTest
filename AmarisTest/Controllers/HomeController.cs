@@ -1,4 +1,5 @@
-﻿using AmarisTest.Models;
+﻿using AmarisTest.Domain.Models;
+using AmarisTest.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,7 +16,8 @@ namespace AmarisTest.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+            return View(employees);
         }
 
         public IActionResult Privacy()
