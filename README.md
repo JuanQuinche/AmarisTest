@@ -17,7 +17,7 @@ Provide step-by-step instructions on how to set up and run your projects locally
 
 1. Clone this repository:
    ```
-   git clone [https://github.com/JuanQuinche/AMarisTest-WebAPI.git](https://github.com/JuanQuinche/AmarisTest.git)
+   git clone https://github.com/JuanQuinche/AmarisTest.git
    ```
 
 2. Navigate to the project folders:
