@@ -13,4 +13,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AmarisTest.Dal\AmarisTest.Dal.csproj" />
+    <ProjectReference Include="..\AmarisTest.Domain\AmarisTest.Domain.csproj" />
+    <ProjectReference Include="..\AmarisTest.Service\AmarisTest.Service.csproj" />
+  </ItemGroup>
+
 </Project>
