@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarisTest", "AmarisTest\AmarisTest.csproj", "{6FFE6D0E-E0DF-4466-8DD1-61443C6ED3FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{4C778E2D-9D9B-4854-BF87-E7218269D536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarisTest.Domain", "AmarisTest.Domain\AmarisTest.Domain.csproj", "{6AD2E2BD-F0BC-48F8-8E67-6ABA5C0BB5D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6FFE6D0E-E0DF-4466-8DD1-61443C6ED3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FFE6D0E-E0DF-4466-8DD1-61443C6ED3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FFE6D0E-E0DF-4466-8DD1-61443C6ED3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C778E2D-9D9B-4854-BF87-E7218269D536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C778E2D-9D9B-4854-BF87-E7218269D536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C778E2D-9D9B-4854-BF87-E7218269D536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C778E2D-9D9B-4854-BF87-E7218269D536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD2E2BD-F0BC-48F8-8E67-6ABA5C0BB5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD2E2BD-F0BC-48F8-8E67-6ABA5C0BB5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD2E2BD-F0BC-48F8-8E67-6ABA5C0BB5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD2E2BD-F0BC-48F8-8E67-6ABA5C0BB5D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
