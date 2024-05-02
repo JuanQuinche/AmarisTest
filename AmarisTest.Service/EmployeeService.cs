@@ -11,22 +11,26 @@ namespace AmarisTest.Service
             _repo = repo;
         }
 
-        public List<Employee> GetEmployee()
+        public async Task<List<Employee>> GetEmployee()
         {
             var processed = new List<Employee>();
-            var employees = _repo.GetEmployee();
+            var employees = await _repo.GetEmployee();
             foreach( var e in employees)
             {
-                e.EmployeeAnnualSalary = e.EmployeeAnnualSalary*12;
+                e.EmployeeAnnualSalary = e.EmployeeSalary*12;
                 processed.Add(e);
             }
             return processed;
         }
 
-        Employee IEmployeeService.GetEmployee(int id)
+        public async Task<Employee?> GetEmployee(int id)
         {
-            var employee = _repo.GetEmployee(id);
-            employee.EmployeeAnnualSalary = employee.EmployeeSalary * 12;
+            var employee = await _repo.GetEmployee(id);
+            if (employee != null)
+            {
+                employee.EmployeeAnnualSalary = employee.EmployeeSalary * 12;
+            }
+
             return employee;
         }
     }

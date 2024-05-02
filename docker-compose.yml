@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    container_name: my_api_container
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+
+  amaristest:
+    image: ${DOCKER_REGISTRY-}amaristest
+    build:
+      context: .
+      dockerfile: AmarisTest/Dockerfile
+

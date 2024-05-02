@@ -9,7 +9,7 @@ namespace AmarisTest.Domain.Interfaces
 {
     public interface IEmployeeRepository
     {
-        Employee[] GetEmployee();
-        Employee GetEmployee(int id);
+        Task<Employee[]> GetEmployee();
+        Task<Employee?> GetEmployee(int id);
     }
 }

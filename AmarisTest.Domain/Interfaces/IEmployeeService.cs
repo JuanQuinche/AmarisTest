@@ -9,9 +9,9 @@ namespace AmarisTest.Domain.Interfaces
 {
     public interface IEmployeeService
     {
-        List<Employee> GetEmployee();
+        Task<List<Employee>> GetEmployee();
 
-        Employee GetEmployee(int id);
+        Task<Employee?> GetEmployee(int id);
 
     }
 }

@@ -20,15 +20,20 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Employee> Get()
+        public async Task<ActionResult<IEnumerable<Employee>>> Get()
         {
-            return _service.GetEmployee(); 
+            return await _service.GetEmployee(); 
         }
 
         [HttpGet("Id")]   
-        public Employee GetEmployee(int id)
-        { 
-            return _service.GetEmployee(id);
+        public async Task<ActionResult<Employee>> GetEmployee(int id)
+        {
+            var employee = await _service.GetEmployee(id);
+            if (employee != null)
+            {
+                return Ok(employee);
+            }
+            return NotFound();
         }
     }
 }
