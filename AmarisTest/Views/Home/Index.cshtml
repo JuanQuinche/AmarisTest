@@ -1,6 +1,6 @@
-﻿@using AmarisTest.Domain.Models;
+﻿@using AmarisTest.Models;
 @using System.Globalization
-@model List<Employee>
+@model List<EmployeeViewModel>
 @{
     ViewData["Title"] = "Search Employees";
 
@@ -43,28 +43,30 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <div></div>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last Name</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Salary</th>
                     <th scope="col">Anual Salary</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var empl in Model)
+                @if (Model != null)
                 {
-                    <tr>
-                        <td scope="col">@empl.Id</td>
-                        <td scope="col">@empl.Name</td>
-                        <td scope="col">@empl.LastName</td>
-                        <td scope="col">@FormatFloatCurrency(empl.EmployeeSalary)</td>
-                        <td scope="col">@FormatFloatCurrency(empl.EmployeeAnnualSalary)</td>
-                    </tr>
+                    @foreach (var empl in Model)
+                    {
+                        <tr >
+                            <td scope="col">@empl.Id</td>
+                            <td scope="col">@empl.Employee_name</td>
+                            <td scope="col">@FormatFloatCurrency(empl.Employee_salary)</td>
+                            <td scope="col">@FormatFloatCurrency(empl.EmployeeAnnualSalary)</td>
+                        </tr>
 
+                    }
                 }
+
             </tbody>
         </table>
     </form>

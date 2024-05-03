@@ -1,10 +1,10 @@
-﻿using AmarisTest.Domain.Models;
+﻿using AmarisTest.Models;
 
 namespace AmarisTest.Services
 {
     public interface IEmployeeService
     {
-        Task<List<Employee>> GetEmployees();
+        Task<IEnumerable<Employee>> GetEmployees();
 
         Task<Employee?> GetEmployee(int id);
     }
