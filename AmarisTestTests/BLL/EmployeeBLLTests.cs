@@ -1,14 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AmarisTest.BLL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AmarisTest.BLL.Tests
+﻿namespace AmarisTest.BLL.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class EmployeeBLLTests
     {
         private readonly IEmployeeBLL _employeeBLL;
