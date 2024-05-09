@@ -8,9 +8,9 @@ namespace AmarisTest.Controllers
     public class EmployeeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmployeeBLL _employeeBLL;
+        private readonly IEmployeeBll _employeeBLL;
 
-        public EmployeeController(ILogger<HomeController> logger, IEmployeeBLL service)
+        public EmployeeController(ILogger<HomeController> logger, IEmployeeBll service)
         {
             _logger = logger;
             _employeeBLL = service;

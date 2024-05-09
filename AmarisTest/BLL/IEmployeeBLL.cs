@@ -2,9 +2,9 @@
 
 namespace AmarisTest.BLL
 {
-    public interface IEmployeeBLL
+    public interface IEmployeeBll
     {
         Task<IEnumerable<EmployeeViewModel>> GetEmployeesVM();
-        int CalculateAnnualSalary(int employee_salary);
+        int CalculateAnnualSalary(int employeeSalary);
     }
 }

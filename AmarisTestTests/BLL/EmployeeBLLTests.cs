@@ -1,16 +1,19 @@
-﻿namespace AmarisTest.BLL.Tests
+﻿using AmarisTest.BLL;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace AmarisTestTests.BLL
 {
     [TestClass]
     public class EmployeeBLLTests
     {
-        private readonly IEmployeeBLL _employeeBLL;
+        private readonly IEmployeeBll _employeeBll;
 
-        public EmployeeBLLTests(IEmployeeBLL employeeBLL)
+        public EmployeeBLLTests(IEmployeeBll employeeBLL)
         {
-            _employeeBLL = employeeBLL;
+            _employeeBll = employeeBLL;
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetEmployeesVMTest()
         {
             //Arrange
@@ -22,13 +25,13 @@
             Assert.Fail();
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void CalculateAnnualSalaryTest()
         {
             var salary = 10000;
-            int expected_result = 120000;
-            int result = _employeeBLL.CalculateAnnualSalary(salary);
-            Assert.AreEqual(result, expected_result);
+            int expectedResult = 120000;
+            int result = _employeeBll.CalculateAnnualSalary(salary);
+            Assert.AreEqual(result, expectedResult);
         }
     }
 }

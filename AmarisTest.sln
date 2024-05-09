@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarisTest.Dal", "AmarisTes
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5D9CCAC4-9FB3-40AB-B319-E14FBB96036F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarisTestTests", "AmarisTestTests\AmarisTestTests.csproj", "{39E18134-4889-4BA0-BE89-6DC24FAC3425}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarisTesting", "AmarisTesting\AmarisTesting.csproj", "{84D1B04E-00B3-495A-AB69-DC741037EFFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{5D9CCAC4-9FB3-40AB-B319-E14FBB96036F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D9CCAC4-9FB3-40AB-B319-E14FBB96036F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D9CCAC4-9FB3-40AB-B319-E14FBB96036F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39E18134-4889-4BA0-BE89-6DC24FAC3425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39E18134-4889-4BA0-BE89-6DC24FAC3425}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39E18134-4889-4BA0-BE89-6DC24FAC3425}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39E18134-4889-4BA0-BE89-6DC24FAC3425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D1B04E-00B3-495A-AB69-DC741037EFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D1B04E-00B3-495A-AB69-DC741037EFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D1B04E-00B3-495A-AB69-DC741037EFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D1B04E-00B3-495A-AB69-DC741037EFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

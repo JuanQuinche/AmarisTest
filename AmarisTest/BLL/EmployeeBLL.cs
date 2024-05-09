@@ -3,11 +3,11 @@ using AmarisTest.Services;
 
 namespace AmarisTest.BLL
 {
-    public class EmployeeBLL : IEmployeeBLL
+    public class EmployeeBll : IEmployeeBll
     {
         private readonly IEmployeeService _employeeService;
 
-        public EmployeeBLL(IEmployeeService employeeService) => _employeeService = employeeService;
+        public EmployeeBll(IEmployeeService employeeService) => _employeeService = employeeService;
 
         public async Task<IEnumerable<EmployeeViewModel>> GetEmployeesVM()
         {
@@ -24,9 +24,9 @@ namespace AmarisTest.BLL
                     });
         }
 
-        public int CalculateAnnualSalary(int employee_salary)
+        public int CalculateAnnualSalary(int employeeSalary)
         {
-            return employee_salary * 12;
+            return employeeSalary * 12;
         }
     }
 }
