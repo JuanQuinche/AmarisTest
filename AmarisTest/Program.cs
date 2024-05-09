@@ -1,3 +1,4 @@
+using AmarisTest.BLL;
 using AmarisTest.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient<IEmployeeService,EmployeeService>(
     c => c.BaseAddress = new Uri("https://dummy.restapiexample.com/"));
+builder.Services.AddScoped<IEmployeeBll, EmployeeBll>();
+
 
 var app = builder.Build();
 
