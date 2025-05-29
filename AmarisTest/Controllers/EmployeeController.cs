@@ -1,22 +1,45 @@
-﻿using AmarisTest.Domain.Interfaces;
+﻿using AmarisTest.BLL;
+using AmarisTest.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace AmarisTest.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly IEmployeeService _service;
+        private readonly ILogger<HomeController> _logger;
+        private readonly IEmployeeBll _employeeBLL;
 
-        public EmployeeController(IEmployeeService service)
+        public EmployeeController(ILogger<HomeController> logger, IEmployeeBll service)
         {
-            service = service ?? throw new ArgumentNullException(nameof(service));
-
+            _logger = logger;
+            _employeeBLL = service;
         }
 
-        public async Task<IActionResult> EmployeeIndex()
+        public IActionResult Index()
         {
-            var employees = await _service.GetEmployee();
-            return View(employees);  
+            var info = _employeeBLL.GetEmployeesVM().Result.ToList();
+
+
+            if (info == null)
+            {
+                return View();
+            }
+            else
+            {
+                return View(info);
+            }
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
     }
