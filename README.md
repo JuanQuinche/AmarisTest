@@ -3,7 +3,7 @@
 ## Description
 AmarisTest and WebAPI are projects created for Juan Quinche's evaluation . 
 
-AmarisTest MVC project is teh project front end.
+AmarisTest MVC project is the project front end.
 WebAPI project is a project to provide a webservice.
 
 ## Table of Contents
