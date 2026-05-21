@@ -36,7 +36,7 @@ Explain how to use your projects. For instance:
 - **WebAPI**:
   - Start the WebAPI server.
   - Make requests to the API endpoints (e.g., `GET /api/products`) through the Swagger page.
-  - Or make requests to the API endpoints (e.g., `GET /api/products`) through your ThundeClient in Code, or Postman/SoapUI
+  - Or make requests to the API endpoints (e.g., `GET /api/products`) through your ThunderClient in Code, or Postman/SoapUI
 
 ## License
 This project is made for technical skills evaluation purposes of the creator. This code cannot be used under no circunstances for no other purposes aside for
